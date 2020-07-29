@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>미니스쿨</title>
+    <!-- plugins:css -->
+    <link
+      rel="stylesheet"
+      href="assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/iconfonts/ionicons/css/ionicons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/iconfonts/typicons/src/font/typicons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css"
+    />
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.addons.css" />
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/shared/style.css" />
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <!-- <link rel="stylesheet" href="assets/css/demo_1/style.css"> -->
+    <link rel="stylesheet" href="assets/scss/demo_1/style.css" />
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/iconfonts/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout col-lg-12 col-12 p-0 d-flex flex-row">
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center"
+        >
+          <a class="navbar-brand brand-logo" href="index.html">
+            <img src="assets/images/logo-minischool-s.png" alt="logo" />
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="index.html">
+            <img src="assets/images/logo-minischool-s.png" alt="logo" />
+          </a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link count-indicator"
+                id="messageDropdown"
+                href="#"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="count">7</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0 alert-wrap"
+                aria-labelledby="messageDropdown"
+              >
+                <a class="dropdown-item py-3">
+                  <p class="mb-0 font-weight-medium float-left">
+                    2 개의 새로운 알림이 있습니다.
+                  </p>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject font-weight-medium text-dark">
+                      수업 알림
+                    </p>
+                    <p class="small-text mb-0">
+                      30분후에 수업이 시작됩니다.
+                    </p>
+                  </div>
+                  <button type="button" class="btn col-1 delete-alert">
+                    <img
+                      src="assets/images/icons/close-icon.svg"
+                      alt="close-icon"
+                      width="12"
+                    />
+                  </button>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject font-weight-medium text-dark">
+                      알림
+                    </p>
+                    <p class="small-text mb-0">
+                      관리자로부터 메세지가 도착하였습니다.
+                    </p>
+                  </div>
+                  <button type="button" class="btn col-1 delete-alert">
+                    <img
+                      src="assets/images/icons/close-icon.svg"
+                      alt="close-icon"
+                      width="12"
+                    />
+                  </button>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link count-indicator"
+                id="notificationDropdown"
+                href="#"
+                data-toggle="dropdown"
+              >
+                <i class="mdi mdi-email-outline"></i>
+                <span class="count bg-success">3</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+                aria-labelledby="notificationDropdown"
+              >
+                <a class="dropdown-item py-3 border-bottom">
+                  <p class="mb-0 font-weight-medium float-left">
+                    4 개의 새로운 메세지가 있습니다.
+                  </p>
+                </a>
+                <a class="dropdown-item preview-item py-3">
+                  <div
+                    class="preview-item-content row"
+                    data-toggle="modal"
+                    data-target="#message-modal"
+                  >
+                    <p class="col-4">관리자</p>
+                    <p class="col-8">2020.03.28</p>
+                    <p class="col-12 mb-0">
+                      시스템 업데이트 공지
+                    </p>
+                  </div>
+                  <button type="button" class="btn col-1 delete-msg">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </a>
+                <a class="dropdown-item preview-item py-3">
+                  <div
+                    class="preview-item-content row"
+                    data-toggle="modal"
+                    data-target="#message-modal"
+                  >
+                    <p class="col-4">김성국</p>
+                    <p class="col-8">2020.04.01</p>
+                    <p class="col-12 mb-0">
+                      선생님이 만나고 싶어요
+                    </p>
+                  </div>
+                  <button type="button" class="btn col-1 delete-msg">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </a>
+              </div>
+            </li>
+            <li
+              class="nav-item dropdown d-none d-xl-inline-block user-dropdown"
+            >
+              <a
+                class="nav-link dropdown-toggle"
+                id="UserDropdown"
+                href="#"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  class="img-xs rounded-circle"
+                  src="assets/images/faces/face8.jpg"
+                  alt="Profile image"
+                />
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="UserDropdown"
+              >
+                <div class="dropdown-header text-center">
+                  <img
+                    class="img-md rounded-circle"
+                    src="assets/images/faces/face8.jpg"
+                    alt="Profile image"
+                  />
+                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
+                  <p class="font-weight-light text-muted mb-0">
+                    allenmoreno@gmail.com
+                  </p>
+                </div>
+                <a class="dropdown-item" href="mypage.html"
+                  >My Page <span class="badge badge-pill badge-danger">1</span
+                  ><i class="dropdown-item-icon ti-dashboard"></i
+                ></a>
+                <a class="dropdown-item"
+                  >Messages<i class="dropdown-item-icon ti-comment-alt"></i
+                ></a>
+                <a class="dropdown-item"
+                  >Sign Out<i class="dropdown-item-icon ti-power-off"></i
+                ></a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- message wrap -->
+      <div
+        class="modal fade"
+        id="message-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby=""
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="row">
+                <div class="col-12">보낸사람 : 관리자</div>
+                <div class="col-12">날짜 : 2020.03.28</div>
+                <div class="col-12">제목 : 시스템 업데이트 공지</div>
+              </div>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+                안녕하세요. 미니스쿨 관리자입니다. 2014년 12월 21일 12시~24경,
+                시스템 업데이트를 진행합니다. 이로 인해 장해가 예상되니
+                준비하셈.
+              </p>
+              <div class="message-form">
+                <form action="">
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="답장 작성하기"
+                  ></textarea>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary show-message">
+                답장하기
+              </button>
+              <button type="button" class="btn btn-primary send-message">
+                보내기
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                삭제
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- message wrap end -->
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="profile-image">
+                  <img
+                    class="img-xs rounded-circle"
+                    src="assets/images/faces/face8.jpg"
+                    alt="profile image"
+                  />
+                  <div class="dot-indicator bg-success"></div>
+                </div>
+                <div class="text-wrapper">
+                  <p class="profile-name">Leo Kim</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <img
+                  src="assets/images/icons/users-solid.png"
+                  alt="users"
+                  width="20"
+                />
+                <span class="menu-title">참여자(학생) 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="class-list.html">
+                <img
+                  src="assets/images/icons/calendar-check-regular.png"
+                  alt="class/event"
+                  height="20"
+                />
+                <span class="menu-title">수업/이벤트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="textbook/make.html">
+                <img
+                  src="assets/images/icons/book-solid.png"
+                  alt="book"
+                  height="20"
+                />
+                <span class="menu-title">교재 관리</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <!-- Page Title Header Starts-->
+            <!-- Page Title Header Ends-->
+            <div class="user-profile">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row mb-5">
+                    <div class="col-2 m-auto text-center">
+                      <a href="#" class="user-img">
+                        <img
+                          src="assets/images/icons/user-img.png"
+                          alt="user-img"
+                          class="user-profile"
+                        />
+                      </a>
+                      <div class="edit-user-img">
+                        <a href="#" class="edit-file-btn"
+                          ><i class="fa fa-cog"></i>
+                        </a>
+                        <input
+                          type="file"
+                          id="user-img"
+                          name="user-img"
+                          onchange="changeValue(this)"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-5 ml-2">
+                      <div class="row">
+                        <div class="user-info col-3">
+                          <p>이름:</p>
+                          <p>전화번호:</p>
+                          <p>소속:</p>
+                          <p>Email:</p>
+                        </div>
+                        <div class="user-info-body col-9">
+                          <p>김성국</p>
+                          <p>010-1234-5678</p>
+                          <p>(주)한솔교육</p>
+                          <p>Leokim@gmail.com</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row">
+                        <div class="col-3">
+                          <p>학생수:</p>
+                          <p>교재수:</p>
+                          <p>수업진행:</p>
+                        </div>
+                        <div class="col-9">
+                          <p>총 932명</p>
+                          <p>총 92개</p>
+                          <p>32회</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <h4 class="pl-3">수업 현황</h4>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>교재 제목</th>
+                            <th>수업 교재</th>
+                            <th>참여학생</th>
+                            <th>수업일시</th>
+                            <th>상태</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="py-1">12-01</td>
+                            <td>영어회화 1편</td>
+                            <td>12-T02(초등영어1)</td>
+                            <td>김성국 김대길</td>
+                            <td>2020.03.28</td>
+                            <td>예약</td>
+                          </tr>
+                          <tr>
+                            <td class="py-1">12-01</td>
+                            <td>영어회화 1편</td>
+                            <td>12-T02(초등영어1)</td>
+                            <td>김성국 김대길</td>
+                            <td>2020.03.28</td>
+                            <td>완료</td>
+                          </tr>
+                          <tr>
+                            <td class="py-1">12-01</td>
+                            <td>영어회화 1편</td>
+                            <td>12-T02(초등영어1)</td>
+                            <td>김성국 김대길</td>
+                            <td>2020.03.28</td>
+                            <td>취소</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- //.card -->
+            </div>
+            <!-- row ends -->
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="modal1"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">학생등록</h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="col-12">
+                      <form class="forms-sample">
+                        <div class="form-group">
+                          <label for="exampleInputName1">이름</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName1"
+                            placeholder="Name"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputName2">부모님 성함</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName2"
+                            placeholder="Name"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputCallNumber1"
+                            >전화번호(휴대폰)</label
+                          >
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="exampleInputCallNumber1"
+                            placeholder="Tel"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">이메일</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Mail"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputAge1">나이</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="exampleInputAge1"
+                            placeholder="Age"
+                            maxlength="2"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputGroup1">그룹</label>
+                          <select name="group" id="" class="custom-select">
+                            <option value=""></option>
+                            <option value="영어">영어</option>
+                            <option value="수학">수학</option>
+                            <option value="한글">한글</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="clientMemo">메모</label>
+                          <textarea
+                            name="clientMemo"
+                            id="clientMemo"
+                            cols="30"
+                            rows="10"
+                            class="form-control"
+                          ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">
+                          저장하기
+                        </button>
+                        <button class="btn btn-secondary" data-dismiss="modal">
+                          취소
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- modal_1 -->
+            <div
+              class="modal fade"
+              id="modal2"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      학생 초대
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="col-12">
+                      <form class="forms-sample">
+                        <p class="">초대할 학생의 전화번호를 입력해 주세요.</p>
+                        <div class="form-group">
+                          <label for="exampleInputCallNumber1">전화번호</label>
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="exampleInputCallNumber1"
+                            placeholder="Tel"
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">
+                          초대하기
+                        </button>
+                        <button class="btn btn-secondary" data-dismiss="modal">
+                          취소
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- modal_2 -->
+            <div
+              class="modal fade"
+              id="modal3"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      그룹 등록
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="col-12">
+                      <form class="forms-sample">
+                        <div class="form-group">
+                          <label for="exampleInputGroup1"
+                            >새로운 그룹 이름</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputGroup1"
+                            placeholder=""
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">
+                          등록하기
+                        </button>
+                        <button class="btn btn-secondary" data-dismiss="modal">
+                          취소
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- modal_3 -->
+            <!-- modal ends -->
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="assets/js/shared/off-canvas.js"></script>
+    <script src="assets/js/shared/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="assets/js/demo_1/dashboard.js"></script>
+    <script src="assets/js/shared/common.js"></script>
+    <!-- End custom js for this page-->
+  </body>
+</html>

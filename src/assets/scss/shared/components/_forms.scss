@@ -1,0 +1,155 @@
+/* Forms */
+
+.input-group-append,
+.input-group-prepend {
+  background: $input-bg;
+  color: $input-placeholder-color;
+  width: auto;
+  border: none;
+
+  .input-group-text {
+    background: transparent;
+    border-color: $border-color;
+  }
+}
+
+.form-control {
+  display: inline-block;
+  border: 1px solid $border-color;
+  font-family: $type-1;
+  font-size: $input-font-size;
+  color: $body-color;
+  padding: 0 0.75rem;
+  line-height: 14px;
+  font-weight: 300;
+
+  &.form-control-lg {
+    padding: $input-btn-padding-y-lg 0.75rem;
+  }
+
+  &.form-control-sm {
+    padding: $input-btn-padding-y-sm 0.75rem;
+  }
+}
+
+textarea.form-control {
+  height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+select {
+  &.form-control {
+    padding: 0.4375rem 0.75rem;
+  }
+}
+
+.form-group {
+  label {
+    font-size: $default-font-size;
+    line-height: 1;
+    vertical-align: top;
+  }
+
+  &.has-danger {
+    .form-control {
+      border-color: theme-color(danger);
+    }
+  }
+
+  .file-upload-default {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .file-upload-info {
+    background: transparent;
+  }
+}
+.login-form {
+  .form-control {
+    &::placeholder {
+      color: #333;
+    }
+  }
+}
+.sign-up-term {
+  .form-check-label {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+  }
+  .color-basic {
+    color: #189ca5;
+  }
+
+  .btn {
+    display: inline-block;
+    color: #9ca2a8;
+    font-size: 15px;
+    text-decoration: underline;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}
+.help {
+  display: none;
+  width: 100%;
+  font-size: 12px;
+}
+.help.is-danger {
+  color: #ff3860;
+}
+.line {
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background-color: #d7d7d7;
+  margin: 0 10px;
+}
+.term-modal {
+  .modal-md {
+    max-width: 800px;
+    height: 70%;
+
+    .modal-header .close {
+      padding: 1.5rem;
+    }
+
+    .modal-body {
+      background-color: #fff;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: theme-color(basic);
+
+        &:hover {
+          background-color: darken(theme-color(basic), 3%);
+        }
+      }
+    }
+  }
+  .terms {
+    h3 {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+    h4 {
+      font-size: 14px;
+    }
+    .p {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+  }
+}

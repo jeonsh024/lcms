@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>미니스쿨</title>
+    <!-- plugins:css -->
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/iconfonts/ionicons/css/ionicons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/iconfonts/typicons/src/font/typicons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/css/vendor.bundle.base.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/css/vendor.bundle.addons.css"
+    />
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- <link rel="stylesheet" href="../assets/css/shared/style.css"> -->
+    <link rel="stylesheet" href="../assets/scss/shared/style.css" />
+    <link rel="stylesheet" href="../assets/scss/shared/textbook.css" />
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <!-- <link rel="stylesheet" href="../assets/css/demo_1/style.css"> -->
+    <link rel="stylesheet" href="../assets/scss/demo_1/style.css" />
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/iconfonts/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout col-lg-12 col-12 p-0 d-flex flex-row">
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center"
+        >
+          <a class="navbar-brand brand-logo" href="../index.html">
+            <img src="../assets/images/logo-minischool-s.png" alt="logo" />
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="../index.html">
+            <img src="../assets/images/logo-minischool-s.png" alt="logo" />
+          </a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link count-indicator"
+                id="messageDropdown"
+                href="#"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="count">7</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0 alert-wrap"
+                aria-labelledby="messageDropdown"
+              >
+                <a class="dropdown-item py-3">
+                  <p class="mb-0 font-weight-medium float-left">
+                    2 개의 새로운 알림이 있습니다.
+                  </p>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject font-weight-medium text-dark">
+                      수업 알림
+                    </p>
+                    <p class="small-text mb-0">
+                      30분후에 수업이 시작됩니다.
+                    </p>
+                  </div>
+                  <button type="button" class="btn col-1 delete-alert">
+                    <img
+                      src="../assets/images/icons/close-icon.svg"
+                      alt="close-icon"
+                      width="12"
+                    />
+                  </button>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject font-weight-medium text-dark">
+                      알림
+                    </p>
+                    <p class="small-text mb-0">
+                      관리자로부터 메세지가 도착하였습니다.
+                    </p>
+                  </div>
+                  <button type="button" class="btn col-1 delete-alert">
+                    <img
+                      src="../assets/images/icons/close-icon.svg"
+                      alt="close-icon"
+                      width="12"
+                    />
+                  </button>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link count-indicator"
+                id="notificationDropdown"
+                href="#"
+                data-toggle="dropdown"
+              >
+                <i class="mdi mdi-email-outline"></i>
+                <span class="count bg-success">3</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+                aria-labelledby="notificationDropdown"
+              >
+                <a class="dropdown-item py-3 border-bottom">
+                  <p class="mb-0 font-weight-medium float-left">
+                    4 개의 새로운 메세지가 있습니다.
+                  </p>
+                </a>
+                <a class="dropdown-item preview-item py-3">
+                  <div
+                    class="preview-item-content row"
+                    data-toggle="modal"
+                    data-target="#message-modal"
+                  >
+                    <p class="col-4">관리자</p>
+                    <p class="col-8">2020.03.28</p>
+                    <p class="col-12 mb-0">
+                      시스템 업데이트 공지
+                    </p>
+                  </div>
+                  <button type="button" class="btn col-1 delete-msg">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </a>
+                <a class="dropdown-item preview-item py-3">
+                  <div
+                    class="preview-item-content row"
+                    data-toggle="modal"
+                    data-target="#message-modal"
+                  >
+                    <p class="col-4">김성국</p>
+                    <p class="col-8">2020.04.01</p>
+                    <p class="col-12 mb-0">
+                      선생님이 만나고 싶어요
+                    </p>
+                  </div>
+                  <button type="button" class="btn col-1 delete-msg">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </a>
+              </div>
+            </li>
+            <li
+              class="nav-item dropdown d-none d-xl-inline-block user-dropdown"
+            >
+              <a
+                class="nav-link dropdown-toggle"
+                id="UserDropdown"
+                href="#"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  class="img-xs rounded-circle"
+                  src="../assets/images/faces/face8.jpg"
+                  alt="Profile image"
+                />
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="UserDropdown"
+              >
+                <div class="dropdown-header text-center">
+                  <img
+                    class="img-md rounded-circle"
+                    src="../assets/images/faces/face8.jpg"
+                    alt="Profile image"
+                  />
+                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
+                  <p class="font-weight-light text-muted mb-0">
+                    allenmoreno@gmail.com
+                  </p>
+                </div>
+                <a class="dropdown-item" href="../mypage.html"
+                  >My Page <span class="badge badge-pill badge-danger">1</span
+                  ><i class="dropdown-item-icon ti-dashboard"></i
+                ></a>
+                <a class="dropdown-item"
+                  >Messages<i class="dropdown-item-icon ti-comment-alt"></i
+                ></a>
+                <a class="dropdown-item"
+                  >Sign Out<i class="dropdown-item-icon ti-power-off"></i
+                ></a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- message wrap -->
+      <div
+        class="modal fade"
+        id="message-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby=""
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="row">
+                <div class="col-12">보낸사람 : 관리자</div>
+                <div class="col-12">날짜 : 2020.03.28</div>
+                <div class="col-12">제목 : 시스템 업데이트 공지</div>
+              </div>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+                안녕하세요. 미니스쿨 관리자입니다. 2014년 12월 21일 12시~24경,
+                시스템 업데이트를 진행합니다. 이로 인해 장해가 예상되니
+                준비하셈.
+              </p>
+              <div class="message-form">
+                <form action="">
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="답장 작성하기"
+                  ></textarea>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary show-message">
+                답장하기
+              </button>
+              <button type="button" class="btn btn-primary send-message">
+                보내기
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                삭제
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- message wrap end -->
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="profile-image">
+                  <img
+                    class="img-xs rounded-circle"
+                    src="../assets/images/faces/face8.jpg"
+                    alt="profile image"
+                  />
+                  <div class="dot-indicator bg-success"></div>
+                </div>
+                <div class="text-wrapper">
+                  <p class="profile-name">Leo Kim</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">
+                <img
+                  src="../assets/images/icons/users-solid.png"
+                  alt="users"
+                  width="20"
+                />
+                <span class="menu-title">참여자(학생) 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../class-list.html">
+                <img
+                  src="../assets/images/icons/calendar-check-regular.png"
+                  alt="class/event"
+                  height="20"
+                />
+                <span class="menu-title">수업/이벤트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="make.html">
+                <img
+                  src="../assets/images/icons/book-solid.png"
+                  alt="book"
+                  height="20"
+                />
+                <span class="menu-title">교재 관리</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper textbook-wrapper">
+            <!-- Page Title Header Starts-->
+            <div class="row page-title-header">
+              <div class="col-12">
+                <div class="">
+                  <div class="col-lg">
+                    <h4 class="page-title mb-2">교재 관리</h4>
+                    <div class="quick-link-wrapper d-md-flex flex-md-wrap">
+                      2020년 3월 20일(목요일) 13:20PM
+                    </div>
+                    <ul class="list-inline mb-0">
+                      <li class="list-inline-item mr-3">등록 학생수: 832명</li>
+                      <li class="list-inline-item mr-3">
+                        진행 수업 횟수: 321회
+                      </li>
+                      <li class="list-inline-item mr-3">등록 교재: 232개</li>
+                      <li class="list-inline-item">저장용량: 23GB</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Page Title Header Ends-->
+            <div class="row">
+              <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="form-inline col-12 mb-4">
+                      <form class="search-form form-inline" action="#">
+                        <div class="form-group">
+                          <input
+                            type="search"
+                            class="form-control"
+                            placeholder="Search Here"
+                          />
+                        </div>
+                      </form>
+                      <div class="form-group form-inline ml-auto">
+                        <a class="btn btn-primary btn-fw" href="new.html"
+                          >교재 만들기</a
+                        >
+                      </div>
+                    </div>
+                    <div class="card-group">
+                      <div class="col-md-3 grid-margin stretch-card">
+                        <div class="card edit-card">
+                          <a href="#">
+                            <img
+                              class="card-img-top"
+                              src="../assets/images/carousel/banner_1.jpg"
+                              alt="Card image cap"
+                            />
+                            <div class="card-info">
+                              <ul class="list-arrow">
+                                <li>UID: 1234</li>
+                                <li>교재그룹: 한솔디지털사업</li>
+                                <li>교육카테고리: 영어</li>
+                                <li>작성자: 김성국</li>
+                                <li>작성일: 2020년 3월 2일</li>
+                                <li>파일 크기: 84K</li>
+                              </ul>
+                            </div>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">교재 이름</h5>
+                            <ul class="card-feature list-inline">
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/pen-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>편집</span>
+                                </a>
+                              </li>
+
+                              <li class="list-inline-item mr-3">
+                                <a
+                                  href="#"
+                                  class="copy-item"
+                                  data-toggle="modal"
+                                  data-target=".bd-example-modal-sm"
+                                >
+                                  <img
+                                    src="../assets/images/icons/clone-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>복사</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#" class="delete-btn">
+                                  <img
+                                    src="../assets/images/icons/trash-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>삭제</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="time-machine.html">
+                                  <img
+                                    src="../assets/images/icons/clock-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>백업/복원</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 grid-margin stretch-card">
+                        <div class="card edit-card">
+                          <a href="#">
+                            <img
+                              class="card-img-top"
+                              src="../assets/images/carousel/banner_2.jpg"
+                              alt="Card image cap"
+                            />
+                            <div class="card-info">
+                              <ul class="list-arrow">
+                                <li>UID: 1234</li>
+                                <li>교재그룹: 한솔디지털사업</li>
+                                <li>교육카테고리: 영어</li>
+                                <li>작성자: 김성국</li>
+                                <li>작성일: 2020년 3월 2일</li>
+                                <li>파일 크기: 84K</li>
+                              </ul>
+                            </div>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <ul class="card-feature list-inline">
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/pen-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>편집</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a
+                                  href="#"
+                                  class="copy-item"
+                                  data-toggle="modal"
+                                  data-target=".bd-example-modal-sm"
+                                >
+                                  <img
+                                    src="../assets/images/icons/clone-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>복사</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#" class="delete-btn">
+                                  <img
+                                    src="../assets/images/icons/trash-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>삭제</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/clock-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>백업/복원</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 grid-margin stretch-card">
+                        <div class="card edit-card">
+                          <a href="#">
+                            <img
+                              class="card-img-top"
+                              src="../assets/images/carousel/banner_3.jpg"
+                              alt="Card image cap"
+                            />
+                            <div class="card-info">
+                              <ul class="list-arrow">
+                                <li>UID: 1234</li>
+                                <li>교재그룹: 한솔디지털사업</li>
+                                <li>교육카테고리: 영어</li>
+                                <li>작성자: 김성국</li>
+                                <li>작성일: 2020년 3월 2일</li>
+                                <li>파일 크기: 84K</li>
+                              </ul>
+                            </div>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <ul class="card-feature list-inline">
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/pen-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>편집</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a
+                                  href="#"
+                                  class="copy-item"
+                                  data-toggle="modal"
+                                  data-target=".bd-example-modal-sm"
+                                >
+                                  <img
+                                    src="../assets/images/icons/clone-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>복사</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#" class="delete-btn">
+                                  <img
+                                    src="../assets/images/icons/trash-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>삭제</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/clock-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>백업/복원</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 grid-margin stretch-card">
+                        <div class="card edit-card">
+                          <a href="#">
+                            <img
+                              class="card-img-top"
+                              src="../assets/images/carousel/banner_4.jpg"
+                              alt="Card image cap"
+                            />
+                            <div class="card-info">
+                              <ul class="list-arrow">
+                                <li>UID: 1234</li>
+                                <li>교재그룹: 한솔디지털사업</li>
+                                <li>교육카테고리: 영어</li>
+                                <li>작성자: 김성국</li>
+                                <li>작성일: 2020년 3월 2일</li>
+                                <li>파일 크기: 84K</li>
+                              </ul>
+                            </div>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <ul class="card-feature list-inline">
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/pen-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>편집</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a
+                                  href="#"
+                                  class="copy-item"
+                                  data-toggle="modal"
+                                  data-target=".bd-example-modal-sm"
+                                >
+                                  <img
+                                    src="../assets/images/icons/clone-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>복사</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#" class="delete-btn">
+                                  <img
+                                    src="../assets/images/icons/trash-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>삭제</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/clock-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>백업/복원</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 grid-margin stretch-card">
+                        <div class="card edit-card">
+                          <a href="#">
+                            <img
+                              class="card-img-top"
+                              src="../assets/images/carousel/banner_5.jpg"
+                              alt="Card image cap"
+                            />
+                            <div class="card-info">
+                              <ul class="list-arrow">
+                                <li>UID: 1234</li>
+                                <li>교재그룹: 한솔디지털사업</li>
+                                <li>교육카테고리: 영어</li>
+                                <li>작성자: 김성국</li>
+                                <li>작성일: 2020년 3월 2일</li>
+                                <li>파일 크기: 84K</li>
+                              </ul>
+                            </div>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <ul class="card-feature list-inline">
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/pen-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>편집</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a
+                                  href="#"
+                                  class="copy-item"
+                                  data-toggle="modal"
+                                  data-target=".bd-example-modal-sm"
+                                >
+                                  <img
+                                    src="../assets/images/icons/clone-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>복사</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#" class="delete-btn">
+                                  <img
+                                    src="../assets/images/icons/trash-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>삭제</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/clock-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>백업/복원</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 grid-margin stretch-card">
+                        <div class="card edit-card">
+                          <a href="#">
+                            <img
+                              class="card-img-top"
+                              src="../assets/images/carousel/banner_6.jpg"
+                              alt="Card image cap"
+                            />
+                            <div class="card-info">
+                              <ul class="list-arrow">
+                                <li>UID: 1234</li>
+                                <li>교재그룹: 한솔디지털사업</li>
+                                <li>교육카테고리: 영어</li>
+                                <li>작성자: 김성국</li>
+                                <li>작성일: 2020년 3월 2일</li>
+                                <li>파일 크기: 84K</li>
+                              </ul>
+                            </div>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <ul class="card-feature list-inline">
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/pen-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>편집</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a
+                                  href="#"
+                                  class="copy-item"
+                                  data-toggle="modal"
+                                  data-target=".bd-example-modal-sm"
+                                >
+                                  <img
+                                    src="../assets/images/icons/clone-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>복사</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#" class="delete-btn">
+                                  <img
+                                    src="../assets/images/icons/trash-solid.svg"
+                                    alt="edit"
+                                    height="13"
+                                  />
+                                  <span>삭제</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-3">
+                                <a href="#">
+                                  <img
+                                    src="../assets/images/icons/clock-regular.svg"
+                                    alt="edit"
+                                    width="13"
+                                  />
+                                  <span>백업/복원</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card-group ends -->
+                    <div
+                      class="modal fade bd-example-modal-sm"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="mySmallModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-dialog-centered modal-sm copied-modal"
+                        role="document"
+                      >
+                        <div class="modal-content">
+                          <h5 class="modal-title m-auto" id="exampleModalLabel">
+                            복사가 완료되었습니다.
+                          </h5>
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- copied item popup -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- row ends -->
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../assets/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../assets/js/shared/off-canvas.js"></script>
+    <script src="../assets/js/shared/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../assets/js/demo_1/dashboard.js"></script>
+    <script src="../assets/js/shared/common.js"></script>
+    <!-- End custom js for this page-->
+  </body>
+</html>

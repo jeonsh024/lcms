@@ -1,0 +1,41 @@
+/* Icons */
+
+.icons-list {
+  border-left: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  >div {
+    background: $card-bg;
+    border-top: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-family: $type-1;
+    font-size: $default-font-size;
+
+    i {
+      display: inline-block;
+      font-size: 20px;
+      width: 40px;
+      text-align: left;
+      color: theme-color(primary);
+
+      
+    }
+  }
+}
+// .i {
+//   display: none;
+
+//   &.i-checkbox-checked2 {
+//     background: url( ../../../images/icons/check-solid.png) no-repeat;
+//     width: 20px;
+//     height: 20px;
+//     position: absolute;
+//     top: 1px;
+//     left: 0;
+//     background-size: 100%;
+//     background-position: 50% 50%;
+//   }
+// }
